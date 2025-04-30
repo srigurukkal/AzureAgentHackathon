@@ -19,6 +19,9 @@ The system integrates several Azure AI services:
 
 I've created two visual diagrams to help you understand the Industry-Specific Knowledge Agent system:
 1. **System Flow Diagram**
+
+![System Flow Diagram](flow_diagram.svg)
+
 This diagram illustrates the information flow through your Healthcare Knowledge Agent system:
 
 The process begins with a user query through the application interface
@@ -30,6 +33,9 @@ The system produces a comprehensive response with proper citations and confidenc
 The diagram shows how the three specialized agents work together in sequence, with each agent building on the work of the previous one. It also highlights how Azure services integrate with the agent system.
 
 2. **Technical Architecture Diagram**
+
+![Technical Architecture  Diagram](technical_architecture.svg)
+
 This second diagram provides a more technical view of the system's architecture:
 
 **Top Layer:** Azure AI Services (OpenAI, AI Search, Form Recognizer)

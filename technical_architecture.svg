@@ -16,7 +16,7 @@
   <!-- Azure AI Search -->
   <rect x="410" y="130" width="180" height="80" fill="#0078d4" rx="5" ry="5" opacity="0.8" />
   <text x="500" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Azure AI Search</text>
-  <text x="500" y="190" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Semantic & Vector Search</text>
+  <text x="500" y="190" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Semantic and Vector Search</text>
   
   <!-- Azure Form Recognizer (Optional) -->
   <rect x="670" y="130" width="180" height="80" fill="#0078d4" rx="5" ry="5" opacity="0.7" />
@@ -36,7 +36,7 @@
   <!-- Semantic Kernel -->
   <rect x="620" y="310" width="230" height="80" fill="#7b83eb" rx="5" ry="5" opacity="0.8" />
   <text x="735" y="340" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Semantic Kernel</text>
-  <text x="735" y="360" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Prompt Orchestration & Functions</text>
+  <text x="735" y="360" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Prompt Orchestration and Functions</text>
   <text x="735" y="375" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">semantic_function | kernel.invoke</text>
   
   <!-- Application Layer -->
@@ -67,7 +67,7 @@
   <!-- Agent System Coordinator -->
   <rect x="150" y="615" width="700" height="70" fill="#4285f4" rx="5" ry="5" opacity="0.8" />
   <text x="500" y="645" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Healthcare Agent System</text>
-  <text x="500" y="665" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Coordinator & Workflow Management | HealthcareAgentSystem class</text>
+  <text x="500" y="665" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Coordinator and Workflow Management | HealthcareAgentSystem class</text>
   
   <!-- Arrows connecting layers -->
   <!-- Azure to Framework -->
