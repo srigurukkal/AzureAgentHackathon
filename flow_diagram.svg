@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1000 780" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background and title -->
+  <rect width="1000" height="780" fill="#f8f9fa" rx="10" ry="10" />
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">Healthcare Industry-Specific Knowledge Agent</text>
+  <text x="500" y="70" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">System Flow Diagram</text>
+  
+  <!-- Step 1: User Query -->
+  <rect x="400" y="100" width="200" height="60" fill="#4285f4" rx="8" ry="8" opacity="0.8" />
+  <text x="500" y="135" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">User Query</text>
+  <text x="500" y="155" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">app_runner.py</text>
+  
+  <!-- Arrow -->
+  <line x1="500" y1="160" x2="500" y2="190" stroke="#333" stroke-width="2" />
+  <polygon points="500,200 495,190 505,190" fill="#333" />
+  
+  <!-- Azure OpenAI Service -->
+  <rect x="150" y="90" width="150" height="70" fill="#0078d4" rx="8" ry="8" opacity="0.7" />
+  <text x="225" y="125" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Azure OpenAI</text>
+  <text x="225" y="145" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Language Models</text>
+  
+  <!-- Azure AI Search -->
+  <rect x="700" y="200" width="150" height="70" fill="#0078d4" rx="8" ry="8" opacity="0.7" />
+  <text x="775" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Azure AI Search</text>
+  <text x="775" y="255" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Healthcare Index</text>
+  
+  <!-- Healthcare Knowledge Base -->
+  <rect x="700" y="80" width="200" height="90" fill="#36a853" rx="5" ry="5" opacity="0.7" />
+  <text x="800" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Healthcare Knowledge Base</text>
+  <text x="800" y="130" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Medical guidelines</text>
+  <text x="800" y="150" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Research papers</text>
+  
+  <!-- Arrow from KB to Search -->
+  <line x1="800" y1="170" x2="775" y2="200" stroke="#333" stroke-width="2" />
+  <polygon points="775,200 770,190 780,190" fill="#333" />
+  
+  <!-- Main System Box -->
+  <rect x="100" y="200" width="800" height="410" fill="#f1f3f4" stroke="#d1d3d4" stroke-width="2" rx="10" ry="10" />
+  <text x="500" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Industry-Specific Knowledge Agent System</text>
+  <text x="500" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">industry_specific_knowledge_agent.py</text>
+  
+  <!-- Step 2: Data Researcher Agent -->
+  <rect x="400" y="280" width="200" height="70" fill="#fbbc05" rx="8" ry="8" opacity="0.8" />
+  <text x="500" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Data Researcher Agent</text>
+  <text x="500" y="330" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Information Retrieval</text>
+  
+  <!-- Arrows to and from Search -->
+  <line x1="600" y1="315" x2="700" y2="250" stroke="#333" stroke-width="2" stroke-dasharray="5, 3" />
+  <polygon points="700,250 695,257 690,247" fill="#333" />
+  <line x1="700" y1="235" x2="600" y2="300" stroke="#333" stroke-width="2" />
+  <polygon points="600,300 605,290 610,305" fill="#333" />
+  <text x="650" y="265" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">query_healthcare_knowledge()</text>
+  
+  <!-- Arrow -->
+  <line x1="500" y1="350" x2="500" y2="380" stroke="#333" stroke-width="2" />
+  <polygon points="500,390 495,380 505,380" fill="#333" />
+  
+  <!-- Step 3: Medical Analyst Agent -->
+  <rect x="400" y="390" width="200" height="70" fill="#ea4335" rx="8" ry="8" opacity="0.8" />
+  <text x="500" y="420" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Medical Analyst Agent</text>
+  <text x="500" y="440" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Information Verification</text>
+  
+  <!-- Arrow from OpenAI to Analyst -->
+  <line x1="225" y1="160" x2="400" y2="420" stroke="#333" stroke-width="2" stroke-dasharray="5, 3" />
+  <polygon points="400,420 392,415 395,425" fill="#333" />
+  <text x="300" y="300" font-family="Arial, sans-serif" font-size="12" transform="rotate(-45, 300, 300)" text-anchor="middle">verify_medical_information()</text>
+  
+  <!-- Arrow -->
+  <line x1="500" y1="460" x2="500" y2="490" stroke="#333" stroke-width="2" />
+  <polygon points="500,500 495,490 505,490" fill="#333" />
+  
+  <!-- Step 4: Clinical Expert Agent -->
+  <rect x="400" y="500" width="200" height="70" fill="#34a853" rx="8" ry="8" opacity="0.8" />
+  <text x="500" y="530" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Clinical Expert Agent</text>
+  <text x="500" y="550" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Information Synthesis</text>
+  
+  <!-- Semantic Kernel -->
+  <rect x="150" y="450" width="150" height="70" fill="#7b83eb" rx="8" ry="8" opacity="0.8" />
+  <text x="225" y="480" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Semantic Kernel</text>
+  <text x="225" y="500" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Orchestration</text>
+  
+  <!-- Arrow from Semantic Kernel to Clinical Expert -->
+  <line x1="300" y1="485" x2="400" y2="520" stroke="#333" stroke-width="2" stroke-dasharray="5, 3" />
+  <polygon points="400,520 390,522 395,510" fill="#333" />
+  <text x="350" y="490" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">synthesize_healthcare_information()</text>
+  
+  <!-- Arrow -->
+  <line x1="500" y1="570" x2="500" y2="620" stroke="#333" stroke-width="2" />
+  <polygon points="500,630 495,620 505,620" fill="#333" />
+  
+  <!-- Synthesis Result -->
+  <rect x="350" y="630" width="300" height="80" fill="#4285f4" rx="8" ry="8" opacity="0.8" />
+  <text x="500" y="660" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Comprehensive Response</text>
+  <text x="500" y="680" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">- Retrieved Information</text>
+  <text x="500" y="695" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">- Medical Analysis + Clinical Context</text>
+  
+  <!-- Output processing -->
+  <rect x="400" y="730" width="200" height="40" fill="#808080" rx="5" ry="5" opacity="0.7" />
+  <text x="500" y="755" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Response Formatting</text>
+  
+  <!-- Arrow -->
+  <line x1="500" y1="710" x2="500" y2="730" stroke="#333" stroke-width="2" />
+  <polygon points="500,730 495,720 505,720" fill="#333" />
+  
+  <!-- Legend -->
+  <rect x="820" y="700" width="150" height="60" fill="white" stroke="#d1d3d4" stroke-width="1" rx="5" ry="5" />
+  <text x="830" y="720" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Legend:</text>
+  <rect x="830" y="730" width="10" height="10" fill="#0078d4" opacity="0.7" />
+  <text x="845" y="740" font-family="Arial, sans-serif" font-size="10">Azure Services</text>
+  <rect x="900" y="730" width="10" height="10" fill="#4285f4" opacity="0.8" />
+  <text x="915" y="740" font-family="Arial, sans-serif" font-size="10">User Interface</text>
+  <rect x="830" y="745" width="10" height="10" fill="#fbbc05" opacity="0.8" />
+  <text x="845" y="755" font-family="Arial, sans-serif" font-size="10">Agent</text>
+</svg>

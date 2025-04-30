@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1000 780" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="780" fill="#f8f9fa" rx="10" ry="10" />
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">Healthcare Knowledge Agent - Technical Architecture</text>
+  
+  <!-- Azure Services Layer -->
+  <rect x="100" y="80" width="800" height="160" fill="#e6f2ff" stroke="#0078d4" stroke-width="2" rx="10" ry="10" />
+  <text x="500" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#0078d4">Azure AI Services</text>
+  
+  <!-- Azure OpenAI -->
+  <rect x="150" y="130" width="180" height="80" fill="#0078d4" rx="5" ry="5" opacity="0.8" />
+  <text x="240" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Azure OpenAI Service</text>
+  <text x="240" y="190" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">GPT-4 Deployment</text>
+  
+  <!-- Azure AI Search -->
+  <rect x="410" y="130" width="180" height="80" fill="#0078d4" rx="5" ry="5" opacity="0.8" />
+  <text x="500" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Azure AI Search</text>
+  <text x="500" y="190" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Semantic & Vector Search</text>
+  
+  <!-- Azure Form Recognizer (Optional) -->
+  <rect x="670" y="130" width="180" height="80" fill="#0078d4" rx="5" ry="5" opacity="0.7" />
+  <text x="760" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Azure Form Recognizer</text>
+  <text x="760" y="190" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">(Document Processing)</text>
+  
+  <!-- Framework Layer -->
+  <rect x="100" y="260" width="800" height="160" fill="#f0f7f0" stroke="#34a853" stroke-width="2" rx="10" ry="10" />
+  <text x="500" y="285" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#34a853">Agent Frameworks</text>
+  
+  <!-- AutoGen -->
+  <rect x="150" y="310" width="230" height="80" fill="#34a853" rx="5" ry="5" opacity="0.8" />
+  <text x="265" y="340" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">AutoGen</text>
+  <text x="265" y="360" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Multi-Agent Orchestration</text>
+  <text x="265" y="375" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">AssistantAgent | UserProxyAgent</text>
+  
+  <!-- Semantic Kernel -->
+  <rect x="620" y="310" width="230" height="80" fill="#7b83eb" rx="5" ry="5" opacity="0.8" />
+  <text x="735" y="340" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Semantic Kernel</text>
+  <text x="735" y="360" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Prompt Orchestration & Functions</text>
+  <text x="735" y="375" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">semantic_function | kernel.invoke</text>
+  
+  <!-- Application Layer -->
+  <rect x="100" y="440" width="800" height="280" fill="#fff2e6" stroke="#ea4335" stroke-width="2" rx="10" ry="10" />
+  <text x="500" y="465" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#ea4335">Healthcare Agent System</text>
+  
+  <!-- Agent Components -->
+  <rect x="130" y="485" width="740" height="220" fill="white" stroke="#d1d3d4" stroke-width="1" rx="5" ry="5" />
+  
+  <!-- Data Researcher Agent -->
+  <rect x="150" y="505" width="210" height="90" fill="#fbbc05" rx="5" ry="5" opacity="0.8" />
+  <text x="255" y="535" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Healthcare Data Researcher</text>
+  <text x="255" y="555" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">- Information Retrieval</text>
+  <text x="255" y="575" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">- query_healthcare_knowledge()</text>
+  
+  <!-- Medical Analyst Agent -->
+  <rect x="395" y="505" width="210" height="90" fill="#ea4335" rx="5" ry="5" opacity="0.8" />
+  <text x="500" y="535" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Medical Analyst</text>
+  <text x="500" y="555" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">- Data Verification</text>
+  <text x="500" y="575" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">- verify_medical_information()</text>
+  
+  <!-- Clinical Expert Agent -->
+  <rect x="640" y="505" width="210" height="90" fill="#34a853" rx="5" ry="5" opacity="0.8" />
+  <text x="745" y="535" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Clinical Expert</text>
+  <text x="745" y="555" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">- Contextual Synthesis</text>
+  <text x="745" y="575" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">- synthesize_healthcare_information()</text>
+  
+  <!-- Agent System Coordinator -->
+  <rect x="150" y="615" width="700" height="70" fill="#4285f4" rx="5" ry="5" opacity="0.8" />
+  <text x="500" y="645" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Healthcare Agent System</text>
+  <text x="500" y="665" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Coordinator & Workflow Management | HealthcareAgentSystem class</text>
+  
+  <!-- Arrows connecting layers -->
+  <!-- Azure to Framework -->
+  <line x1="240" y1="210" x2="240" y2="310" stroke="#333" stroke-width="2" stroke-dasharray="5, 3" />
+  <line x1="500" y1="210" x2="500" y2="260" stroke="#333" stroke-width="2" />
+  <line x1="735" y1="210" x2="735" y2="310" stroke="#333" stroke-width="2" stroke-dasharray="5, 3" />
+  
+  <!-- Framework to Application -->
+  <line x1="265" y1="390" x2="265" y2="505" stroke="#333" stroke-width="2" />
+  <line x1="735" y1="390" x2="735" y2="505" stroke="#333" stroke-width="2" />
+  
+  <!-- Agent to Coordinator -->
+  <line x1="255" y1="595" x2="255" y2="615" stroke="#333" stroke-width="2" />
+  <line x1="500" y1="595" x2="500" y2="615" stroke="#333" stroke-width="2" />
+  <line x1="745" y1="595" x2="745" y2="615" stroke="#333" stroke-width="2" />
+  
+  <!-- File Structure -->
+  <rect x="50" y="740" width="900" height="30" fill="#f1f3f4" stroke="#d1d3d4" stroke-width="1" rx="5" ry="5" />
+  <text x="500" y="760" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">
+    ⟨industry_specific_knowledge_agent.py | search_index_setup.py | sample_data_uploader.py | app_runner.py⟩
+  </text>
+</svg>

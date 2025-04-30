@@ -1,0 +1,9 @@
+.vs/
+.vscode/
+**/.vs/
+*.vsidx
+*.suo
+*.user
+*.mp4
+#Add this line to the end of the file
+.fake
