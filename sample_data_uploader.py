@@ -11,10 +11,10 @@ from azure.search.documents import SearchClient
 load_dotenv()
 
 # Azure OpenAI Service configuration
-AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
-AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
-AZURE_OPENAI_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4")
-AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2023-07-01-preview")
+AZURE_OPENAI_EMBEDDING_API_KEY = os.getenv("AZURE_OPENAI_EMBEDDING_API_KEY")
+AZURE_OPENAI_EMBEDDING_ENDPOINT = os.getenv("AZURE_OPENAI_EMBEDDING_ENDPOINT")
+AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME")
+AZURE_OPENAI_EMBEDDING_API_VERSION = os.getenv("AZURE_OPENAI_EMBEDDING_API_VERSION")
 
 # Azure AI Search configuration
 AZURE_SEARCH_SERVICE_ENDPOINT = os.getenv("AZURE_SEARCH_SERVICE_ENDPOINT")
@@ -23,9 +23,9 @@ AZURE_SEARCH_API_KEY = os.getenv("AZURE_SEARCH_API_KEY")
 
 # Set up Azure OpenAI client
 openai.api_type = "azure"
-openai.api_version = AZURE_OPENAI_API_VERSION
-openai.api_base = AZURE_OPENAI_ENDPOINT
-openai.api_key = AZURE_OPENAI_API_KEY
+openai.api_version = AZURE_OPENAI_EMBEDDING_API_VERSION
+openai.api_base = AZURE_OPENAI_EMBEDDING_ENDPOINT
+openai.api_key = AZURE_OPENAI_EMBEDDING_API_KEY
 
 # Initialize Azure AI Search client
 search_client = SearchClient(
@@ -45,7 +45,7 @@ def generate_embeddings(text):
         # Replace with your actual embedding model deployment
         response = openai.Embedding.create(
             input=text,
-            engine="text-embedding-ada-002"  # Use your actual deployment name
+            engine=AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME  # Use your actual deployment name
         )
         return response['data'][0]['embedding']
     except Exception as e:

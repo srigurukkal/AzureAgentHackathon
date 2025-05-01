@@ -10,10 +10,12 @@ from azure.search.documents.indexes.models import (
     SearchFieldDataType,
     SemanticConfiguration,
     SemanticField,
-    SemanticSettings,
+    SemanticPrioritizedFields,
+    SemanticSearch,
     VectorSearch,
+    VectorSearchProfile,
     HnswParameters,
-    VectorSearchAlgorithmConfiguration
+    HnswAlgorithmConfiguration
 )
 
 # Load environment variables
@@ -53,41 +55,51 @@ def create_healthcare_knowledge_index():
         )
     ]
     
+    # Define the semantic fields
+    title_field = SemanticField(field_name="title")
+    content_fields = [SemanticField(field_name="content")]
+    keywords_fields = [
+    SemanticField(field_name="keywords"),
+    SemanticField(field_name="medical_specialties")
+    ]
+    
+    # Define prioritized fields
+    prioritized_fields = SemanticPrioritizedFields(
+        title_field=title_field,
+        content_fields=content_fields,
+        keywords_fields=keywords_fields
+    )
     # Define semantic configuration for healthcare content
     # This enables semantic search capabilities
     semantic_config = SemanticConfiguration(
         name="healthcare-config",
-        prioritized_fields=SemanticField(
-            title_field=SemanticField(field_name="title"),
-            content_fields=[SemanticField(field_name="content")],
-            keyword_fields=[SemanticField(field_name="keywords"), SemanticField(field_name="medical_specialties")]
-        )
+        prioritized_fields=prioritized_fields
     )
     
     # Configure vector search for the index
     vector_search = VectorSearch(
+        profiles=[VectorSearchProfile(name="healthcare-vector-config", algorithm_configuration_name="healthcare-algorithm-config")],
         algorithms=[
-            VectorSearchAlgorithmConfiguration(
-                name="healthcare-vector-config",
-                kind="hnsw",
-                hnsw_parameters=HnswParameters(
-                    m=4,
-                    ef_construction=400,
-                    ef_search=500,
-                    metric="cosine"
-                )
+        HnswAlgorithmConfiguration(
+            name="healthcare-algorithm-config",
+            parameters=HnswParameters(
+                m=4,
+                ef_construction=400,
+                ef_search=500,
+                metric="cosine"
             )
+        )
         ]
     )
     
     # Create the semantic settings with the configuration
-    semantic_settings = SemanticSettings(configurations=[semantic_config])
+    semantic_settings = SemanticSearch(configurations=[semantic_config])
     
     # Create the index definition
     index = SearchIndex(
         name=AZURE_SEARCH_INDEX_NAME,
         fields=fields,
-        semantic_settings=semantic_settings,
+        semantic_search=semantic_settings,
         vector_search=vector_search
     )
     
