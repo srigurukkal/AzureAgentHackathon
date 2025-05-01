@@ -60,8 +60,6 @@ The HealthcareAgentSystem class coordinates all these components.
 
 ## System Architecture
 
-![System Architecture](architecture_diagram.png)
-
 The system follows this workflow:
 1. User query is processed by the main application
 2. Data Researcher Agent searches the knowledge base using Azure AI Search
